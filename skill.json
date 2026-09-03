@@ -1,0 +1,45 @@
+{
+  "name": "genpark-merchant-inventory-stockout-reorder-forecaster-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Real-time merchant inventory stockout risk forecaster and automated purchase order reorder point calculator.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "merchant-agent",
+  "tags": [
+    "inventory-operations",
+    "stockout-forecaster",
+    "reorder-point",
+    "merchant-agent",
+    "anthropic-commerce"
+  ],
+  "inputs": {
+    "sku_id": {
+      "type": "string"
+    },
+    "current_on_hand_inventory": {
+      "type": "integer"
+    },
+    "daily_sales_velocity_30d": {
+      "type": "number"
+    },
+    "supplier_lead_time_days": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "inventory_forecast_id": {
+      "type": "string"
+    },
+    "days_of_inventory_remaining": {
+      "type": "number"
+    },
+    "stockout_risk_status": {
+      "type": "string"
+    },
+    "inventory_health_report_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
